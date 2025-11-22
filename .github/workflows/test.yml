@@ -19,6 +19,16 @@ jobs:
         with:
           python-version: '3.10'
 
+      - name: Install dependencies
+        run: |
+          pip install pytest
+
+      - name: Run Tests
+        run: |
+          pytest -q
+
       - name: Run Python Script
         run: |
           python app.py
+
+
